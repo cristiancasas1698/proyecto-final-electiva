@@ -1,0 +1,16 @@
+#barra{
+    /* background-color: #00acc9;  */
+    background-color: rgb(140, 17, 255);
+   
+}
+a.navbar-brand{
+    background-color: white;
+    margin: 0px;
+    position: absolute;
+    left: 0px;
+} 
+a.nav-link.text-white{
+    font-family: 'Roboto', sans-serif;;
+    font-size: 110%;
+    padding: 8px 20px;
+}
