@@ -16,6 +16,7 @@ import { BodyComponent } from './pages/body/body.component';
 import { EducativoComponent } from './pages/educativo/educativo.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
     BodyComponent,
     EducativoComponent,
     FooterComponent,
-    QuienesSomosComponent
+    QuienesSomosComponent,
+    UniversidadesPrivadasComponent
   ],
   imports: [
     BrowserModule,

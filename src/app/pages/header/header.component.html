@@ -1,4 +1,4 @@
-<nav class="navbar sticky-top navbar-expand-lg " id="barra" role="navigation">
+<nav class="navbar sticky-top navbar-expand-lg" id="barra" role="navigation">
   <a class="navbar-brand" href="#">
     <img src="../assets/images/logo-ucc4.png" width="130" height="52" alt="" loading="lazy">
   </a>
@@ -16,15 +16,15 @@
             Sectores
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a routerLink="/educativo" class="dropdown-item" (click)="educativo()">Educativo</a>
+            <a routerLink="/educativo" class="dropdown-item" [routerLink]="['/sectores','educativo']">Educativo</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Sector Privado</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Sector Publico</a>
           </div>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white" href="#">Quienes Somos</a>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link text-white" [routerLink]="['/home','quienes-somos']">Quienes Somos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="#">Capital Humano</a>
