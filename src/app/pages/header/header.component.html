@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg  navbar-light " id="barra">
+<nav class="navbar sticky-top navbar-expand-lg " id="barra" role="navigation">
   <a class="navbar-brand" href="#">
     <img src="../assets/images/logo-ucc4.png" width="130" height="52" alt="" loading="lazy">
   </a>
@@ -9,17 +9,18 @@
     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Pagina Principal</a>
+          <a class="nav-link text-white" href="/home">Pagina Principal</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Sectores
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a routerLink="/educativo" class="dropdown-item" (click)="educativo()">Educativo</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="#">Sector Privado</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Sector Publico</a>
           </div>
         </li>
         <li class="nav-item">
@@ -32,30 +33,12 @@
           <a class="nav-link text-white" href="#">Capital Relacional</a>
         </li>
       </ul>
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form> -->
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-outline-light " (click)="salir()">
+          Salir
+        </button> 
+      </form> 
     </div>
 </nav>
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="../assets/images/slider-1.png" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/images/slider-2.png" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/images/slider-1.png" alt="Third slide">
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
+
+

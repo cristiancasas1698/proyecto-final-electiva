@@ -12,6 +12,10 @@ import { LoginComponent } from './pages/login/login.component';
 import {RecaptchaModule} from 'ng-recaptcha';
 import { from } from 'rxjs';
 import { HeaderComponent } from './pages/header/header.component';
+import { BodyComponent } from './pages/body/body.component';
+import { EducativoComponent } from './pages/educativo/educativo.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { HeaderComponent } from './pages/header/header.component';
     RegistroComponent,
     HomeComponent,
     LoginComponent,
-    HeaderComponent
+    HeaderComponent,
+    BodyComponent,
+    EducativoComponent,
+    FooterComponent,
+    QuienesSomosComponent
   ],
   imports: [
     BrowserModule,
