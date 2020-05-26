@@ -1,3 +1,76 @@
-<p>
-  universidades-privadas works!
-</p>
+<div class="animated fadeIn">
+  <app-header></app-header>
+
+  <!------------------------------ESPACIO DE SEPARACION --------------------------------------->
+ <!--  <nav aria-label="breadcrumb ">
+   <ol class="breadcrumb bg-info">
+     <li class="breadcrumb-item active text-white" aria-current="page"><h5>SUB-SECTORES</h5></li>
+   </ol>
+ </nav> -->
+ <!------------------------------FIN ESPACIO DE SEPARACION --------------------------------------->
+  <div class="card-group mt-2">
+    <div class="col-sm-4">
+       <div class="list-group ">
+         <a [routerLink]="['/sectores','educativo']" class="list-group-item list-group-item-action">
+           Sub-Sectores
+         </a>
+         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidad Privadas</a>
+         <a href="#" class="list-group-item list-group-item-action">Universidad Publicas</a>
+       </div>
+    </div>
+
+    <!------------------------------2 COLUMNA --------------------------------------->
+    <div class="col-sm-8">
+     <h1>Listado De Universidades</h1>
+     <hr>
+     <button routerLink="/sectores/educativo/universidad-rivada/nuevo" class="btn btn-primary">
+      <i class="fa fa-plus"></i>
+      Agregar
+     </button>
+     
+     <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
+     <table class="table mt-2">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Direccion</th>
+          <th scope="col">Descripcion</th>
+          <th scope="col">convenio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>ucc</td>
+          <td>calle 2a</td>
+          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, voluptatum similique debitis praesentium tempora unde eum sint, perferendis doloremque, magnam fugit eaque. Eos totam facere, velit sint beatae sed.</td>
+          <td>si</td>
+        </tr>
+      </tbody>
+    </table>
+   <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
+
+
+   <div class="alert alert-warning text-center mt-3">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+      <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+  </div>
+
+
+   <div class="alert alert-info text-center mt-3">
+     <h4 class="alert-heading">Cargando</h4>
+     <p>
+       <i class="fa fa-sync-alt fa-spinner fa-2x"></i>
+     </p>
+     <p class="mb-0">
+       espere por favor
+     </p>
+   </div>
+
+   </div> 
+  </div>
+<app-footer></app-footer>
+</div>

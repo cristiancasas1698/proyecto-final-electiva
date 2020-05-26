@@ -11,7 +11,7 @@
    <div class="card-group mt-2">
      <div class="col-sm-4">
         <div class="list-group ">
-          <a href="#" class="list-group-item list-group-item-action active">
+          <a [routerLink]="['/sectores','educativo']" class="list-group-item list-group-item-action active">
             Sub-Sectores
           </a>
           <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action ">Universidad Privadas</a>
@@ -34,6 +34,7 @@
         non quae nesciunt saepe sequi vel cum voluptatum nulla, consequuntur consectetur temporibus
         possimus at. Officia, voluptates!</p>
            <br>
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
     </div> 
    </div>
  <app-footer></app-footer>

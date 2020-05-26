@@ -1,0 +1,86 @@
+<div class="animated fadeIn">
+  <app-header></app-header>
+
+  <!------------------------------ESPACIO DE SEPARACION --------------------------------------->
+ <!--  <nav aria-label="breadcrumb ">
+   <ol class="breadcrumb bg-info">
+     <li class="breadcrumb-item active text-white" aria-current="page"><h5>SUB-SECTORES</h5></li>
+   </ol>
+ </nav> -->
+ <!------------------------------FIN ESPACIO DE SEPARACION --------------------------------------->
+  <div class="card-group mt-2">
+    <div class="col-sm-4">
+       <div class="list-group ">
+         <a [routerLink]="['/sectores','educativo']" class="list-group-item list-group-item-action">
+           Sub-Sectores
+         </a>
+         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidad Privadas</a>
+         <a href="#" class="list-group-item list-group-item-action">Universidad Publicas</a>
+       </div>
+    </div>
+
+    <!------------------------------2 COLUMNA --------------------------------------->
+    <div class="col-sm-8">
+     <h1>Gestionar Universidades-Privadas</h1>
+     <hr>
+
+     <form>
+       <div class="form-group">
+         <label>Firebase ID</label>
+         <input type="text"
+                class="form-control"
+                disabled="disabled"
+                placeholder="Firebase ID">
+          <small class="form-text text-muted">Este campo es autogenerado</small>
+       </div>
+
+       <div class="form-group">
+        <label>Nombre</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Nombre de la universidad"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label>Direccion</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Direccion de la universidad"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label>descripcion</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Descripcion de la universidad"
+               required>
+      </div>
+
+      <div class="form-group">
+        <label>convenio</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Tiene un convenio?"
+               required>
+      </div>
+
+      <hr>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+     </form>
+     
+     <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
+   
+   <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
+
+   </div> 
+  </div>
+  <hr>
+<app-footer></app-footer>
+</div>

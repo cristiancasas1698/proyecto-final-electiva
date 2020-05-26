@@ -7,7 +7,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { EducativoComponent } from './pages/educativo/educativo.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
-
+import { UniversidadPrivadaComponent } from './pages/universidad-privada/universidad-privada.component';
 
 const routes: Routes = [
   { path: 'home'    , component: HomeComponent },
@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'sectores/educativo', component: EducativoComponent},
   { path: 'home/quienes-somos', component: QuienesSomosComponent},
   { path: 'sectores/educativo/universidades-privadas', component: UniversidadesPrivadasComponent},
+  { path: 'sectores/educativo/universidad-rivada/:id', component: UniversidadPrivadaComponent},
   { path: '**', redirectTo: 'registro' }
 ];
 

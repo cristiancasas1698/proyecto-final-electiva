@@ -10,13 +10,14 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import {RecaptchaModule} from 'ng-recaptcha';
-import { from } from 'rxjs';
+
 import { HeaderComponent } from './pages/header/header.component';
 import { BodyComponent } from './pages/body/body.component';
 import { EducativoComponent } from './pages/educativo/educativo.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
+import { UniversidadPrivadaComponent } from './pages/universidad-privada/universidad-privada.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/u
     EducativoComponent,
     FooterComponent,
     QuienesSomosComponent,
-    UniversidadesPrivadasComponent
+    UniversidadesPrivadasComponent,
+    UniversidadPrivadaComponent
   ],
   imports: [
     BrowserModule,
