@@ -18,6 +18,8 @@ export class UniversidadesPrivadasComponent implements OnInit {
   constructor( private universidadService: UniversidadesService) { }
 
   ngOnInit() {
+
+    
     this.cargando = true;
     this.universidadService.mostrarUniversidades()
     .subscribe( resp => {this.universidades = resp;

@@ -46,8 +46,6 @@ export class UniversidadesService {
       map(this.crearArreglo),
       delay(1500)
     );
-
-
   }
   //crear un arreglo para obtener la lista de universidades y mostrarla en la tabla
   private crearArreglo( universidadObj: object){

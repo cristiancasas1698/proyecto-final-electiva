@@ -22,7 +22,7 @@
      </button>
      
      <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
-     <table 
+     <table *ngIf="!cargando && gremios.length > 0"
          class="table mt-2 animated fadeIn faster">
       <thead class="thead-dark">
         <tr>
@@ -35,39 +35,29 @@
         </tr>
       </thead>
       <tbody>
-      <!--    <tr *ngFor = "let universidad of universidades; let i = index">
+    <tr *ngFor = "let gremio of gremios; let i = index">
           <th scope="row">{{ i + 1}}</th>
-          <td>{{universidad.nombre}}</td>
-          <td>{{universidad.direccion}}</td>
-          <td>{{universidad.descripcion}}</td>
-          <td>{{universidad.convenio}}</td>
+          <td>{{gremio.nombre}}</td>
+          <td>{{gremio.descripcion}}</td>
+          <td>{{gremio.convenio}}</td>
+          <td>{{gremio.contacto}}</td>
           <td>
             <button class="btn btn-info mr-1"
-                    [routerLink]="['/sectores','educativo','universidad-privada',universidad.id]">
+                    [routerLink]="['/sectores','sgremios','gestionar-gremio',gremio.id]">
               editar           
             </button>
             <button class="btn btn-danger mr-1"
-                    (click)="BorrarUniversidad(universidad, i)">
+                    (click)="BorrarGremio(gremio, i)">
               eliminar           
-            </button>
-
-
+            </button> 
           </td>
-        </tr>  -->
-        <tr>
-          <th scope="col">1</th>
-          <th scope="col">gremios unidos</th>
-          <th scope="col">gremio del valle del cauca</th>
-          <th scope="col">cristian casas</th>
-          <th scope="col">si</th>
-          <th scope="col"></th>
-        </tr>
+        </tr>  
       </tbody>
     </table>
    <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
 
 
-   <div 
+   <div *ngIf="!cargando && gremios.length === 0"
       class="alert alert-warning text-center mt-3 animated fadeIn faster">
     <h4 class="alert-heading">No hay registros</h4>
     <p>
@@ -76,7 +66,7 @@
   </div>
 
 
-   <div 
+   <div *ngIf="cargando"
        class="alert alert-info text-center mt-3 animated fadeIn faster">
      <h4 class="alert-heading">Cargando</h4>
      <p>
