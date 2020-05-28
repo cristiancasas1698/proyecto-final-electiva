@@ -24,6 +24,8 @@ import { GremiosComponent } from './pages/gremios/gremios.component';
 import { SectorMediosComunicacionComponent } from './pages/sector-medios-comunicacion/sector-medios-comunicacion.component';
 import { MedioComunicacionComponent } from './pages/medio-comunicacion/medio-comunicacion.component';
 import { MediosComunicacionesComponent } from './pages/medios-comunicaciones/medios-comunicaciones.component';
+import { CapitalHumanoComponent } from './pages/capital-humano/capital-humano.component';
+import { CapitalRelacionalComponent } from './pages/capital-relacional/capital-relacional.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { MediosComunicacionesComponent } from './pages/medios-comunicaciones/med
     GremiosComponent,
     SectorMediosComunicacionComponent,
     MedioComunicacionComponent,
-    MediosComunicacionesComponent
+    MediosComunicacionesComponent,
+    CapitalHumanoComponent,
+    CapitalRelacionalComponent
   ],
   imports: [
     BrowserModule,

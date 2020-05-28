@@ -31,7 +31,7 @@
                 class="form-control"
                 disabled="disabled"
                 placeholder="Firebase ID"
-                [(ngModel)]=universidad.id
+                [(ngModel)]=medio.id
                 name="id">
           <small class="form-text text-muted">Este campo es autogenerado</small>
        </div>
@@ -42,8 +42,8 @@
                class="form-control"
                placeholder="Digital, Impresos, radiales, television"
                required
-               [(ngModel)]=universidad.nombre
-                name="tipo-medio">
+               [(ngModel)]=medio.tipomedio
+                name="tipomedio">
       </div>
 
       <div class="form-group">
@@ -52,7 +52,7 @@
                class="form-control"
                placeholder="nombre del medio de comunicacion"
                required
-               [(ngModel)]=nombre
+               [(ngModel)]=medio.nombre
                 name="nombre">
       </div>
 
@@ -62,7 +62,7 @@
                class="form-control"
                placeholder="Tiene un convenio?"
                required
-               [(ngModel)]=convenio
+               [(ngModel)]=medio.convenio
                name="convenio">       
       </div>
 
@@ -73,7 +73,7 @@
                class="form-control"
                placeholder="Contacto del medio"
                required
-               [(ngModel)]=universidad.descripcion
+               [(ngModel)]=medio.contacto
                name="contacto">         
       </div>
 

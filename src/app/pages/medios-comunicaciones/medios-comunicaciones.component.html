@@ -28,7 +28,7 @@
      </button>
      
      <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
-     <table *ngIf="!cargando"
+     <table *ngIf="!cargando && medios.length > 0"
          class="table mt-2 animated fadeIn faster">
       <thead class="thead-dark">
         <tr>
@@ -41,39 +41,33 @@
         </tr>
       </thead>
       <tbody>
-   <!--       <tr *ngFor = "let universidad of universidades; let i = index">
+          <tr *ngFor = "let medio of medios; let i = index">
           <th scope="row">{{ i + 1}}</th>
-          <td>{{universidad.nombre}}</td>
-          <td>{{universidad.direccion}}</td>
-          <td>{{universidad.descripcion}}</td>
-          <td>{{universidad.convenio}}</td>
+          <td>{{medio.tipomedio}}</td>
+          <td>{{medio.nombre}}</td>
+          <td>{{medio.convenio}}</td>
+          <td>{{medio.contacto}}</td>
           <td>
             <button class="btn btn-info mr-1"
-                    [routerLink]="['/sectores','educativo','universidad-privada',universidad.id]">
+            [routerLink]="['/sectores','smedios-comunicacion','Mcomunicacion',medio.id]">
               editar           
             </button>
             <button class="btn btn-danger mr-1"
-                    (click)="BorrarUniversidad(universidad, i)">
+                    (click)="BorrarMedio(medio,i)">
               eliminar           
             </button>
-
+   
 
           </td>
-        </tr>  -->
-        <tr>
-          <th scope="col">1</th>
-          <th scope="col">television</th>
-          <th scope="col">el siguiente programa</th>
-          <th scope="col">si</th>
-          <th scope="col">cristian</th>
-          <th scope="col">opciones</th>
-        </tr>
+        </tr>  
+      
       </tbody>
     </table>
+    <!-- [routerLink]="['/sectores','educativo','universidad-privada',universidad.id]" -->
    <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
 
 
-   <div 
+   <div *ngIf="!cargando && medios.length === 0"
       class="alert alert-warning text-center mt-3 animated fadeIn faster">
     <h4 class="alert-heading">No hay registros</h4>
     <p>
@@ -82,7 +76,7 @@
   </div>
 
 
-   <div 
+   <div *ngIf="cargando"
        class="alert alert-info text-center mt-3 animated fadeIn faster">
      <h4 class="alert-heading">Cargando</h4>
      <p>
