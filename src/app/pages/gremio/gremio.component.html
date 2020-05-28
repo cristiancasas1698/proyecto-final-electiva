@@ -1,0 +1,86 @@
+<div class="animated fadeIn">
+  <app-header></app-header>
+
+<!------------------------------ESPACIO DE SEPARACION --------------------------------------->
+ <!------------------------------FIN ESPACIO DE SEPARACION --------------------------------------->
+  <div class="card-group mt-2">
+    <div class="col-sm-4">
+       <div class="list-group ">
+         <a [routerLink]="['/sectores','sgremios']" class="list-group-item list-group-item-action">
+           Sub-Sectores
+         </a>
+         <a [routerLink]="['/sectores','sgremios','gestionar-gremios']" class="list-group-item list-group-item-action  active">Gestionar Gremios</a>
+       </div>
+    </div>
+
+    <!------------------------------2 COLUMNA --------------------------------------->
+    <div class="col-sm-8">
+     <h1>Gestionar Gremios</h1>
+     <hr>
+
+     <form >
+       <div class="form-group">
+         <label>Firebase ID</label>
+         <input type="text"
+                class="form-control"
+                disabled="disabled"
+                placeholder="Firebase ID"
+                name="id">
+          <small class="form-text text-muted">Este campo es autogenerado</small>
+       </div>
+
+       <div class="form-group">
+        <label>Nombre</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Nombre del gremio"
+               required
+              name="nombre">
+      </div>
+
+      <div class="form-group">
+        <label>descripcion</label>
+        <input type="text"
+               class="form-control"
+               placeholder="descripcion del gremio"
+               required
+               name="descripcion">
+      </div>
+
+      <div class="form-group">
+        <label>convenio</label>
+        <input type="text"
+               class="form-control"
+               placeholder="tiene convenio con la universidad?"
+               required             
+               name="convenio">         
+      </div>
+
+      <div class="form-group">
+        <label>contacto</label>
+        <input type="text"
+               class="form-control"
+               placeholder="contacto del convenio"
+               required
+            
+               name="contacto">       
+      </div>
+
+      <hr>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+     </form>
+     
+     <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
+   
+   <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
+
+   </div> 
+  </div>
+  <hr>
+<app-footer></app-footer>
+</div>
