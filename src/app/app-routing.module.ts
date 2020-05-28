@@ -9,6 +9,9 @@ import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.compo
 import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
 import { UniversidadPrivadaComponent } from './pages/universidad-privada/universidad-privada.component';
 import { SectorGremiosComponent } from './pages/sector-gremios/sector-gremios.component';
+import { MedioComunicacionComponent } from './pages/medio-comunicacion/medio-comunicacion.component';
+import { MediosComunicacionesComponent } from './pages/medios-comunicaciones/medios-comunicaciones.component';
+import { SectorMediosComunicacionComponent } from './pages/sector-medios-comunicacion/sector-medios-comunicacion.component';
 import { GremioComponent} from './pages/gremio/gremio.component';
 import { GremiosComponent} from './pages/gremios/gremios.component';
 
@@ -20,6 +23,9 @@ const routes: Routes = [
   { path: 'sectores/sgremios', component: SectorGremiosComponent},
   { path: 'sectores/sgremios/gestionar-gremios', component: GremiosComponent},
   { path: 'sectores/sgremios/gestionar-gremio/:id', component: GremioComponent},
+  { path: 'sectores/smedios-comunicacion', component: SectorMediosComunicacionComponent},
+  { path: 'sectores/smedios-comunicacion/Mcomunicacion/:id', component: MedioComunicacionComponent},
+  { path: 'sectores/smedios-comunicacion/Mcomunicaciones', component: MediosComunicacionesComponent},
   { path: 'home/quienes-somos', component: QuienesSomosComponent},
   { path: 'sectores/educativo/universidades-privadas', component: UniversidadesPrivadasComponent},
   { path: 'sectores/educativo/universidad-privada/:id', component: UniversidadPrivadaComponent},

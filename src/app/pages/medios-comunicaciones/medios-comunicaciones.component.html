@@ -1,0 +1,99 @@
+<div class="animated fadeIn">
+  <app-header></app-header>
+
+  <!------------------------------ESPACIO DE SEPARACION --------------------------------------->
+ <!--  <nav aria-label="breadcrumb ">
+   <ol class="breadcrumb bg-info">
+     <li class="breadcrumb-item active text-white" aria-current="page"><h5>SUB-SECTORES</h5></li>
+   </ol>
+ </nav> -->
+ <!------------------------------FIN ESPACIO DE SEPARACION --------------------------------------->
+  <div class="card-group mt-2">
+    <div class="col-sm-4">
+       <div class="list-group ">
+         <a [routerLink]="['/sectores','smedios-comunicacion']" class="list-group-item list-group-item-action">
+           Sub-Sectores
+         </a>
+         <a [routerLink]="['/sectores','smedios-comunicacion','Mcomunicaciones']" class="list-group-item list-group-item-action  active">Gestionar Medios De Comunicacion</a>
+       </div>
+    </div>
+
+    <!------------------------------2 COLUMNA --------------------------------------->
+    <div class="col-sm-8">
+     <h1>Listado De Medios De Comunicacion</h1>
+     <hr>
+     <button routerLink="/sectores/smedios-comunicacion/Mcomunicacion/nuevo" class="btn btn-primary">
+      <i class="fa fa-plus"></i>
+      Agregar
+     </button>
+     
+     <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
+     <table *ngIf="!cargando"
+         class="table mt-2 animated fadeIn faster">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Tipo-medio</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Convenio</th>
+          <th scope="col">Contacto</th>
+          <th scope="col">opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+   <!--       <tr *ngFor = "let universidad of universidades; let i = index">
+          <th scope="row">{{ i + 1}}</th>
+          <td>{{universidad.nombre}}</td>
+          <td>{{universidad.direccion}}</td>
+          <td>{{universidad.descripcion}}</td>
+          <td>{{universidad.convenio}}</td>
+          <td>
+            <button class="btn btn-info mr-1"
+                    [routerLink]="['/sectores','educativo','universidad-privada',universidad.id]">
+              editar           
+            </button>
+            <button class="btn btn-danger mr-1"
+                    (click)="BorrarUniversidad(universidad, i)">
+              eliminar           
+            </button>
+
+
+          </td>
+        </tr>  -->
+        <tr>
+          <th scope="col">1</th>
+          <th scope="col">television</th>
+          <th scope="col">el siguiente programa</th>
+          <th scope="col">si</th>
+          <th scope="col">cristian</th>
+          <th scope="col">opciones</th>
+        </tr>
+      </tbody>
+    </table>
+   <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
+
+
+   <div 
+      class="alert alert-warning text-center mt-3 animated fadeIn faster">
+    <h4 class="alert-heading">No hay registros</h4>
+    <p>
+      <i class="fa fa-exclamation fa-2x"></i>
+    </p>
+  </div>
+
+
+   <div 
+       class="alert alert-info text-center mt-3 animated fadeIn faster">
+     <h4 class="alert-heading">Cargando</h4>
+     <p>
+      <i class="fa fa-spinner fa-spin fa-2x"></i>
+     </p>
+     <p class="mb-0">
+       espere por favor
+     </p>
+   </div>
+
+   </div> 
+  </div>
+<app-footer></app-footer>
+</div>

@@ -1,0 +1,98 @@
+<div class="animated fadeIn">
+  <app-header></app-header>
+
+  <!------------------------------ESPACIO DE SEPARACION --------------------------------------->
+ <!--  <nav aria-label="breadcrumb ">
+   <ol class="breadcrumb bg-info">
+     <li class="breadcrumb-item active text-white" aria-current="page"><h5>SUB-SECTORES</h5></li>
+   </ol>
+ </nav> -->
+ <!------------------------------FIN ESPACIO DE SEPARACION --------------------------------------->
+  <div class="card-group mt-2">
+    <div class="col-sm-4">
+       <div class="list-group ">
+         <a [routerLink]="['/sectores','smedios-comunicacion']" class="list-group-item list-group-item-action">
+           Sub-Sectores
+         </a>
+         <a [routerLink]="['/sectores','smedios-comunicacion','Mcomunicaciones']" class="list-group-item list-group-item-action  active">Gestionar Medios De Comunicacion</a>
+       </div>
+    </div>
+
+    <!------------------------------2 COLUMNA --------------------------------------->
+    <div class="col-sm-8">
+     <h1>Gestionar Medios De Comunicacion</h1>
+     <hr>
+
+     <form (ngSubmit)="guardar( f )"
+                       #f="ngForm">
+       <div class="form-group">
+         <label>Firebase ID</label>
+         <input type="text"
+                class="form-control"
+                disabled="disabled"
+                placeholder="Firebase ID"
+                [(ngModel)]=universidad.id
+                name="id">
+          <small class="form-text text-muted">Este campo es autogenerado</small>
+       </div>
+
+       <div class="form-group">
+        <label>Tipo de medio de comunicacion</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Digital, Impresos, radiales, television"
+               required
+               [(ngModel)]=universidad.nombre
+                name="tipo-medio">
+      </div>
+
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text"
+               class="form-control"
+               placeholder="nombre del medio de comunicacion"
+               required
+               [(ngModel)]=nombre
+                name="nombre">
+      </div>
+
+      <div class="form-group">
+        <label>convenio</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Tiene un convenio?"
+               required
+               [(ngModel)]=convenio
+               name="convenio">       
+      </div>
+
+
+      <div class="form-group">
+        <label>Contacto</label>
+        <input type="text"
+               class="form-control"
+               placeholder="Contacto del medio"
+               required
+               [(ngModel)]=universidad.descripcion
+               name="contacto">         
+      </div>
+
+   
+      <hr>
+      <div class="form-group text-center">
+        <button type="submit" class="btn btn-primary w-25">
+          <i class="fa fa-save"></i>
+          Guardar
+        </button>
+      </div>
+     </form>
+     
+     <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
+   
+   <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
+
+   </div> 
+  </div>
+  <hr>
+<app-footer></app-footer>
+</div>
