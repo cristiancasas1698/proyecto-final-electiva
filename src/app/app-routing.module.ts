@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'sectores/educativo', component: EducativoComponent},
   { path: 'home/quienes-somos', component: QuienesSomosComponent},
   { path: 'sectores/educativo/universidades-privadas', component: UniversidadesPrivadasComponent},
-  { path: 'sectores/educativo/universidad-rivada/:id', component: UniversidadPrivadaComponent},
+  { path: 'sectores/educativo/universidad-privada/:id', component: UniversidadPrivadaComponent},
   { path: '**', redirectTo: 'registro' }
 ];
 

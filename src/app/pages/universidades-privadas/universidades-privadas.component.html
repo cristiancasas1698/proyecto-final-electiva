@@ -14,8 +14,7 @@
          <a [routerLink]="['/sectores','educativo']" class="list-group-item list-group-item-action">
            Sub-Sectores
          </a>
-         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidad Privadas</a>
-         <a href="#" class="list-group-item list-group-item-action">Universidad Publicas</a>
+         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidades</a>
        </div>
     </div>
 
@@ -23,13 +22,14 @@
     <div class="col-sm-8">
      <h1>Listado De Universidades</h1>
      <hr>
-     <button routerLink="/sectores/educativo/universidad-rivada/nuevo" class="btn btn-primary">
+     <button routerLink="/sectores/educativo/universidad-privada/nuevo" class="btn btn-primary">
       <i class="fa fa-plus"></i>
       Agregar
      </button>
      
      <!------------------------------TABLA DE UNIVERSIDADES--------------------------------------->
-     <table class="table mt-2">
+     <table *ngIf="!cargando"
+         class="table mt-2 animated fadeIn faster">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
@@ -37,22 +37,36 @@
           <th scope="col">Direccion</th>
           <th scope="col">Descripcion</th>
           <th scope="col">convenio</th>
+          <th scope="col">opciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>ucc</td>
-          <td>calle 2a</td>
-          <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores provident, voluptatum similique debitis praesentium tempora unde eum sint, perferendis doloremque, magnam fugit eaque. Eos totam facere, velit sint beatae sed.</td>
-          <td>si</td>
-        </tr>
+         <tr *ngFor = "let universidad of universidades; let i = index">
+          <th scope="row">{{ i + 1}}</th>
+          <td>{{universidad.nombre}}</td>
+          <td>{{universidad.direccion}}</td>
+          <td>{{universidad.descripcion}}</td>
+          <td>{{universidad.convenio}}</td>
+          <td>
+            <button class="btn btn-info mr-1"
+                    [routerLink]="['/sectores','educativo','universidad-privada',universidad.id]">
+              editar           
+            </button>
+            <button class="btn btn-danger mr-1"
+                    (click)="BorrarUniversidad(universidad, i)">
+              eliminar           
+            </button>
+
+
+          </td>
+        </tr> 
       </tbody>
     </table>
    <!------------------------------FIN TABLA DE UNIVERSIDADES--------------------------------------->
 
 
-   <div class="alert alert-warning text-center mt-3">
+   <div *ngIf="!cargando && universidades.length === 0"
+      class="alert alert-warning text-center mt-3 animated fadeIn faster">
     <h4 class="alert-heading">No hay registros</h4>
     <p>
       <i class="fa fa-exclamation fa-2x"></i>
@@ -60,10 +74,11 @@
   </div>
 
 
-   <div class="alert alert-info text-center mt-3">
+   <div *ngIf="cargando"
+       class="alert alert-info text-center mt-3 animated fadeIn faster">
      <h4 class="alert-heading">Cargando</h4>
      <p>
-       <i class="fa fa-sync-alt fa-spinner fa-2x"></i>
+      <i class="fa fa-spinner fa-spin fa-2x"></i>
      </p>
      <p class="mb-0">
        espere por favor

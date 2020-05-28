@@ -14,8 +14,7 @@
          <a [routerLink]="['/sectores','educativo']" class="list-group-item list-group-item-action">
            Sub-Sectores
          </a>
-         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidad Privadas</a>
-         <a href="#" class="list-group-item list-group-item-action">Universidad Publicas</a>
+         <a [routerLink]="['/sectores','educativo','universidades-privadas']" class="list-group-item list-group-item-action  active">Universidades</a>
        </div>
     </div>
 
@@ -24,13 +23,16 @@
      <h1>Gestionar Universidades-Privadas</h1>
      <hr>
 
-     <form>
+     <form (ngSubmit)="guardar( f )"
+                       #f="ngForm">
        <div class="form-group">
          <label>Firebase ID</label>
          <input type="text"
                 class="form-control"
                 disabled="disabled"
-                placeholder="Firebase ID">
+                placeholder="Firebase ID"
+                [(ngModel)]=universidad.id
+                name="id">
           <small class="form-text text-muted">Este campo es autogenerado</small>
        </div>
 
@@ -39,7 +41,9 @@
         <input type="text"
                class="form-control"
                placeholder="Nombre de la universidad"
-               required>
+               required
+               [(ngModel)]=universidad.nombre
+                name="nombre">
       </div>
 
       <div class="form-group">
@@ -47,7 +51,9 @@
         <input type="text"
                class="form-control"
                placeholder="Direccion de la universidad"
-               required>
+               required
+               [(ngModel)]=universidad.direccion
+                name="direccion">
       </div>
 
       <div class="form-group">
@@ -55,7 +61,9 @@
         <input type="text"
                class="form-control"
                placeholder="Descripcion de la universidad"
-               required>
+               required
+               [(ngModel)]=universidad.descripcion
+               name="descripcion">         
       </div>
 
       <div class="form-group">
@@ -63,7 +71,9 @@
         <input type="text"
                class="form-control"
                placeholder="Tiene un convenio?"
-               required>
+               required
+               [(ngModel)]=universidad.convenio
+               name="convenio">       
       </div>
 
       <hr>

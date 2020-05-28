@@ -18,6 +18,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
 import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
 import { UniversidadPrivadaComponent } from './pages/universidad-privada/universidad-privada.component';
+import { SectorGremiosComponent } from './pages/sector-gremios/sector-gremios.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { UniversidadPrivadaComponent } from './pages/universidad-privada/univers
     FooterComponent,
     QuienesSomosComponent,
     UniversidadesPrivadasComponent,
-    UniversidadPrivadaComponent
+    UniversidadPrivadaComponent,
+    SectorGremiosComponent
   ],
   imports: [
     BrowserModule,
