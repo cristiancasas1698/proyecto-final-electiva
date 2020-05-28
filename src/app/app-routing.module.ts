@@ -6,6 +6,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { LoginComponent } from './pages/login/login.component';
 import { EducativoComponent } from './pages/educativo/educativo.component';
 import { QuienesSomosComponent } from './pages/quienes-somos/quienes-somos.component';
+import { CapitalRelacionalComponent } from './pages/capital-relacional/capital-relacional.component';
+import { CapitalHumanoComponent } from './pages/capital-humano/capital-humano.component';
 import { UniversidadesPrivadasComponent } from './pages/universidades-privadas/universidades-privadas.component';
 import { UniversidadPrivadaComponent } from './pages/universidad-privada/universidad-privada.component';
 import { SectorGremiosComponent } from './pages/sector-gremios/sector-gremios.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
   { path: 'sectores/smedios-comunicacion/Mcomunicacion/:id', component: MedioComunicacionComponent},
   { path: 'sectores/smedios-comunicacion/Mcomunicaciones', component: MediosComunicacionesComponent},
   { path: 'home/quienes-somos', component: QuienesSomosComponent},
+  { path: 'home/capital-relacional', component: CapitalRelacionalComponent},
+  { path: 'home/capital-humano', component: CapitalHumanoComponent},
   { path: 'sectores/educativo/universidades-privadas', component: UniversidadesPrivadasComponent},
   { path: 'sectores/educativo/universidad-privada/:id', component: UniversidadPrivadaComponent},
   { path: '**', redirectTo: 'registro' }
